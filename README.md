@@ -1,2 +1,6 @@
 # docs-oxd
-To Do: Documentation for the oxD mediator. 
+Documentation for the oxD mediator. 
+
+Starting points: 
+- [http://ox.gluu.org/doku.php?id=oxd:rp](http://ox.gluu.org/doku.php?id=oxd:rp)
+- [http://ox.gluu.org/doku.php?id=oxd:home](http://ox.gluu.org/doku.php?id=oxd:home)
