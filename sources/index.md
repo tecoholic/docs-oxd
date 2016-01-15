@@ -5,7 +5,7 @@
 
 Gluu oxD is the new addition to the Gluu family which acts as a mediator between `mod_ox` Apache plugins and OpenID Connect & UMA Authorization server (oxAuth). It is a standalone application bound within `localhost` using only sockets to communicate with the plugins and servers. The application is developed in `java` to use its rich libraries.
 
-![oxd_overview](link to image)
+![oxd_overview](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/oxd_overview.png)
 
 # Design
 
