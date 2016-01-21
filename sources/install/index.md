@@ -1,6 +1,15 @@
 [TOC]
 
 # Installation
+This page documents the building, installation of the oxD server.
+
+## Build oxD Server
+oxD server can be built using Maven.
+
+oxD code is available in  [Github](https://github.com/GluuFederation/oxd). Maven is used to build the code from github. Download the oxD code from github in any method that is suitable. The code can be downloaded directly from [this link](https://github.com/GluuFederation/oxd/archive/master.zip). The following command can be run inside the oxd folder and it will build oxD Server. Please read the [Maven Guide](http://maven.apache.org/download.cgi) to download and install Maven if necessary.
+
+`# mvn clean package`
+
 
 ## Windows Installation
 It is not necessary to install oxD in Windows, it can be downloaded and run. The oxD server is available for download from [maven repository](http://ox.gluu.org/maven/org/xdi/oxd-server/1.0.6-master-SNAPSHOT/oxd-server-1.0.6-master-SNAPSHOT-distribution.zip).
@@ -48,3 +57,4 @@ configuration.json
 * time_out_in_seconds - time out for oxd socket in seconds
 * register_client_app_type - dynamic client registration application type
 * register_client_response_types - dynamic client registration response types
+
