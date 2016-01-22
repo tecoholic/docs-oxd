@@ -1,4 +1,10 @@
-[TOC]
+# Welcome to the OXD Documentation
+
+
+# Documentation
+- [Introduction](./intro/index.md)
+	  - [Plugins](./plugin/index.md)
+
 
 # Introduction
 ![image](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-oxd-login-plugin/master/plugin.jpg)
@@ -9,5 +15,7 @@ Gluu oxD is the new addition to the Gluu family which acts as a mediator between
 
 # Design
 
-The disign goal for oxD is simplicity and with that goal the use of (python/php) libraries by the website is kept simple. 
+The disign goal for oxD is simplicity and with that goal the use of (python/php) libraries by the website is kept simple.
+
+[TOC]
 

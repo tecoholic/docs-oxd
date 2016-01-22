@@ -10,3 +10,8 @@ pages:
  
 - [index.md, Home]
 
+# Introduction
+- [intro/index.md, oxD Server, Introduction]
+
+# Plugins
+- [plugin/index.md, Plugins, Introduction]
