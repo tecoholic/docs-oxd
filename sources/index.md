@@ -15,7 +15,7 @@ Gluu oxD is the new addition to the Gluu family which is set of software that he
 Under oxD we understand:
 
 - [oxD Server](./oxdserver/index.md)
-- oxD plugins (which are actually clients of oxD Server, for example `mod_ox` Apache plugins which helps to protect Apache resources with OpenID Connect & UMA Authorization server (oxAuth). It is a standalone application bound within `localhost` using only sockets to communicate with the plugins and servers.
+- [oxD plugins](./plugin/index.md) (which are actually clients of oxD Server, for example `mod_ox` Apache plugins which helps to protect Apache resources with OpenID Connect & UMA Authorization server (oxAuth). It is a standalone application bound within `localhost` using only sockets to communicate with the plugins and servers.
 
 ![oxd_overview](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/oxd_overview.png)
 
