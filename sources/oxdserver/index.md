@@ -48,3 +48,166 @@ Request:
     }
 }
 ```
+
+Response:
+
+```json
+{
+    "status":"ok",
+    "data":{
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF"
+    }
+}
+```
+
+## Get authorization url
+
+Note: authorization_code grant type
+
+Request:
+
+```json
+{
+    "command":"get_authorization_url",
+    "params": {
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF"
+        "acr_values":["basic", "duo"]                         <- optional, may be skipped (default: basic)
+    }
+}
+```
+
+Response:
+
+```json
+{
+    "status":"ok",
+    "data":{
+        "authorization_url":"  https://server.example.com/authorize?response_type=id_token%20token
+    &client_id=s6BhdRkqt3
+    &redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb
+    &scope=openid%20profile
+    &state=af0ifjsldkj
+    &nonce=n-0S6_WzA2Mj"
+    }
+}
+```
+
+## Get Tokens (ID & Access) by Code
+
+Note: Python library must provide utility methods for web site to parse response from OP and send parsed code and state parameters to oxd:
+
+```
+HTTP/1.1 302 Found
+Location: https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=af0ifjsldkj&scopes=openid%20profile
+```
+
+Request:
+
+```json
+{
+    "command":"get_tokens_by_code",
+    "params": {
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
+        "code":"I6IjIifX0",                <- Required, code from OP redirect url (see example above)
+        "state":"af0ifjsldkj",             <- Optional can be skipped
+        "scopes":["openid", "profile"]     <- Required, scopes from OP redirect url (see example above)
+    }
+}
+```
+
+Or otherwise if library does not provide parsing call it like this:
+
+Request:
+
+```
+{
+    "command":"get_tokens_by_code",
+    "params": {
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
+        "location":"https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=af0ifjsldkj&scopes=openid%20profile"
+    }
+}
+```
+
+Response:
+
+```
+{
+    "status":"ok",
+    "data":{
+        "access_token":"SlAV32hkKG",
+        "expires_in":3600,
+        "refresh_token":"aaAV32hkKG1"
+        "id_token":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso",
+        "id_token_claims": {
+             "iss": "https://server.example.com",
+             "sub": "24400320",
+             "aud": "s6BhdRkqt3",
+             "nonce": "n-0S6_WzA2Mj",
+             "exp": 1311281970,
+             "iat": 1311280970,
+             "at_hash": "MTIzNDU2Nzg5MDEyMzQ1Ng"
+        }
+    }
+}
+```
+
+## Get User Info
+
+Request:
+
+```json
+{
+    "command":"get_user_info",
+    "params": {
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
+        "access_token":"SlAV32hkKG"
+    }
+}
+```
+
+Response:
+
+```json
+{
+    "status":"ok",
+    "data":{
+        "claims":{
+            "sub": ["248289761001"],
+            "name": ["Jane Doe"],
+            "given_name": ["Jane"],
+            "family_name": ["Doe"],
+            "preferred_username": ["j.doe"],
+            "email": ["janedoe@example.com"],
+            "picture": ["http://example.com/janedoe/me.jpg"]
+        }
+    }
+}
+```
+
+## Log out
+
+Request:
+
+```json
+{
+    "command":"logout",
+    "params": {
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
+        "id_token":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso" <-- OPTIONAL (oxd server will use last used ID Token)
+        "post_logout_redirect_uri":"<post logout redirect uri here>",   <-- OPTIONAL
+        "http_based_logout":false     <- true if front-channed http based logout should be used
+    }
+}
+```
+
+Response:
+
+```json
+{
+    "status":"ok",
+    "data":{
+        "html":"<html of http based logout>"  <-- OPTIONAL, returned only if http_based_logout=true
+    }
+}
+```
