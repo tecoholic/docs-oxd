@@ -20,11 +20,13 @@ Under oxD we understand:
 ![oxd_overview](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/oxd_overview.png)
 
 
-
-
 # Documentation
 
-- [Introduction](./intro/index.md)
-    - [oxD Server](./plugin/index.md)
-	- [Plugins](./plugin/index.md)
+- [oxD Server](./oxdserver/index.md)
+    - [Installation](./oxdserver/install/index.md)
+    - [Run](./oxdserver/run/index.md)
+    - [Troubleshooting](./oxdserver/troubleshooting/index.md)
+- [Plugins](./plugin/index.md)
+    - [Python](./plugin/python/index.md)
+    - [Php](./plugin/php/index.md)
 

@@ -10,8 +10,14 @@ pages:
  
 - [index.md, Home]
 
-# Introduction
-- [intro/index.md, oxD Server, Introduction]
+# oxD Server
+- [oxdserver/index.md, oxD Server, Introduction]
+- [oxdserver/install/index.md, oxD Server, Installation]
+- [oxdserver/run/index.md, oxD Server, Run]
+- [oxdserver/troubleshooting/index.md, oxD Server, Troubleshooting]
 
 # Plugins
 - [plugin/index.md, Plugins, Introduction]
+- [plugin/python/index.md, Plugins, Python]
+- [plugin/php/index.md, Plugins, Php]
+
