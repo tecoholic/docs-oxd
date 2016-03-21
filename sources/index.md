@@ -28,7 +28,7 @@ Under oxD we understand:
     - [Troubleshooting](./oxdserver/troubleshooting/index.md)
 - [Plugins](./plugin/index.md)
     - [Python](./plugin/python/index.md)
-    - [Php Library](./plugin/php/index.md)
+    - [Php Library](./plugin/php/library/index.md)
     - [Wordpress plugin](./plugin/php/wordpress/index.md)
     - [Magento extension](./plugin/php/magento/index.md)
     - [Drupal module](./plugin/php/drupal/index.md)
