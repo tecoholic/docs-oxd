@@ -79,3 +79,39 @@ Now in your admin menu panel you can see Gluu SSO {version menu} tab, click on i
 3. Admin Email: please add your or admin email address for registrating site in Gluu server.
 4. Oxd port: choose that port which is using oxd-server (see in oxd-server/conf/oxd-conf.json file).
 5. Click next to continue.
+
+If You are successfully registered in gluu server, you will see bottom page.
+
+![Oxd_id](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/2.png) 
+
+For making sure go to your gluu server / OpenID Connect / Clients and search  Your oxd id
+
+If you want to reset configurations click on Reset configurations button.
+
+# Step 10. OpenID Connect Configuration
+
+OpenID Connect Configuration page for wp-gluu-sso 2.4.2 and wp-gluu-sso 2.4.3 are different.
+
+###Scopes.
+You can look all scopes in your gluu server / OpenID Connect / Scopes and understand the meaning of  every scope.
+Scopes are need for getting loged in users information from gluu server.
+Pay attention to that, which scopes you are using that are switched on in your gluu server.
+
+In wp-gluu-sso 2.4.2  you can only enable, disable and delete scope.
+![Scopes1](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/3.png) 
+
+In wp-gluu-sso 2.4.3 you can not only enable, disable and delete scope, but also add new scope, but when you add new scope by {any name}, necessary to add that scop in your gluu server too. 
+![Scopes2](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/4.png) 
+
+###Custom scripts.
+
+![Customscripts](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/5.png) 
+
+You can look all custom scripts in your gluu server / Configuration / Manage Custom Scripts / and enable login type, which type you want.
+Custom Script represent itself the type of login, at this moment gluu server supports (U2F, Duo, Google +, Basic) types.
+
+###Pay attention to that.
+
+1. Which custom script you enable in your wordpress site in order it must be switched on in gluu server too.
+2. Which custom script you will be enable in OpenID Connect Configuration page, after saving that will be showed in Wordpress Configuration page to.
+3. When you create new custom script, both fields are required.
