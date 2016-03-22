@@ -34,7 +34,7 @@ or
 1. Unzip your oXD-server. 
 2. Open the command line and navigate to the extracted folder in the conf directory.
 3. Open oxd-conf.json file.  
-4. If your server is using 8099 port, please change "port" number to free port, which is not using.
+4. If your server is using 8099 port, please change "port" number to free port, which is not used.
 5. Set parameter "op_host":"Your gluu-server-url (internal or external)"
 6. Open the command line and navigate to the extracted folder in the bin directory.
 7. For Linux environment, run sh oxd-start.sh&. 
@@ -139,10 +139,10 @@ Customize shape, space between icons and size of the login icons.
 
 ### Display Options
  
-1. If you enable Default Login Form,than ogin icons will show in wordpress Default Login page .
-2. If you enable Default Registration Form,than ogin icons will show in wordpress Default Registration page .
-3. If you enable Comment Form,than ogin icons will show near wordpress Comment Form.
-4. If you enable WooCommerce Login Form,than ogin icons will show in wordpress WooCommerce Login page.
+1. If you enable Default Login Form,than login icons will be showed in wordpress Default Login page .
+2. If you enable Default Registration Form,than login icons will be showed in wordpress Default Registration page .
+3. If you enable Comment Form,than login icons will be showed near wordpress Comment Form.
+4. If you enable WooCommerce Login Form,than login icons will be showed in wordpress WooCommerce Login page.
 
 ![WordpressConfiguration](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/6.png) 
 
@@ -151,6 +151,6 @@ Customize shape, space between icons and size of the login icons.
 You can use plugin also as widget.
 In your widget page (https://{site-base-url}/wp-admin/widgets.php) find Gluu SSO Widget and use.
 
-## Step 13. Showing icons in frontend
+## Step 13. Show icons in frontend
 
 ![frontend](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/7.png)
