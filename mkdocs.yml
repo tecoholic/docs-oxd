@@ -20,7 +20,7 @@ pages:
 - [plugin/index.md, Plugins, Introduction]
 - [plugin/python/index.md, Plugins, Python]
 - [plugin/php/index.md, Plugins, Php]
-- [plugin/php/library/index.md, Php, Php library]
+- [plugin/php/library/index.md, Php library]
 - [plugin/php/cms/wordpress/index.md, Php, Wordpress plugin]
 - [plugin/php/cms/magento/index.md, Php, Magento extension]
 - [plugin/php/cms/drupal/index.md, Php, Drupal module]

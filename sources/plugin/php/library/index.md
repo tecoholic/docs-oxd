@@ -1,4 +1,4 @@
-[](#oxd-rp-php)oxd-rp-php
+Oxd-rp php library
 =========================
 
 Need to download and install gluu server in Your web server. For more
@@ -7,13 +7,12 @@ information [click me](http://www.gluu.org/docs/).
 Need to download and install OXD server in Your web server. For more
 information [click me](http://ox.gluu.org/doku.php?id=oxd:rp).
 
-For OXD server configuration [click
-me](http://ox.gluu.org/doku.php?id=oxd:home&s[]=mvn).
+For OXD server configuration [click me](http://ox.gluu.org/doku.php?id=oxd:home&s[]=mvn).
 
 PHP Client Library for the [Gluu OXD-RP
-Server](https://github.com/GluuFederation/oxd-php/oxd-rp).
+Server](https://github.com/GluuFederation/oxd-php/tree/master/oxd-rp).
 
-oxd-rp-php configuration {#oxd_server_configuration .sectionedit5}
+oxd-rp-php configuration 
 ------------------------
 
 Configuration file is located in 'oxd-rp/oxd-rp-settings.json' file in
@@ -21,38 +20,36 @@ distribution package.
 
 (Save this as a file called `oxd-rp-settings.json`)
 
- oxd-rp-settings.json
-:   ``` {.code .file .json}
-    {
-        "oxd_host_ip": "127.0.0.1",
-        "oxd_host_port":8099,
-        "authorization_redirect_uri" : "",
-        "logout_redirect_uri" : "",
-        "scope" : [ "openid", "profile" ],
-        "application_type" : "web",
-        "redirect_uris" : [ "" ],
-        "response_types" : ["code"],
-        "grant_types":"authorization_code",
-        "acr_values" : [ "basic", "duo" ]
-    }
-                            
-    ```
+``` {.code }
+{
+    "oxd_host_ip": "127.0.0.1",
+    "oxd_host_port":8099,
+    "authorization_redirect_uri" : "",
+    "logout_redirect_uri" : "",
+    "scope" : [ "openid", "profile" ],
+    "application_type" : "web",
+    "redirect_uris" : [ "" ],
+    "response_types" : ["code"],
+    "grant_types":"authorization_code",
+    "acr_values" : [ "basic", "duo" ]
+}
+                        
+```
 
--   oxd\_host\_port - port of oxd socket
--   oxd\_host\_ip - flag to restrict communication to localhost only (if
-    false then it's not restricted to localhost only)
+-   oxd_host_port - port of oxd socket
+-   oxd_host_ip - flag to restrict communication to localhost only (if false then it's not restricted to localhost only)
 
 **Goal** :
 
 -   It should be super simple to use library (
     [python](https://github.com/GluuFederation/oxd-python)  /  
-    [php-oxd-rp](https://github.com/GluuFederation/oxd-php/oxd-rp)) by
+    [php-oxd-rp](https://github.com/GluuFederation/oxd-php/tree/master/oxd-rp)) by
     web site
 -   implementation of new library (on any language) should be simplified
 
 [![](http://ox.gluu.org/lib/exe/fetch.php?media=oxd:oxd-rp.png)](http://ox.gluu.org/lib/exe/detail.php?id=oxd%3Arp&media=oxd:oxd-rp.png "oxd:oxd-rp.png")
 
-Web site {#web_site .sectionedit2}
+Web site 
 --------
 
 Web site communicates with oxd via library (python/php-oxd-rp). Library
@@ -64,7 +61,7 @@ First of all web site must register itself on oxd with registration
 command (via library (
 [python](https://github.com/GluuFederation/oxd-python)  /  
 [php](https://github.com/GluuFederation/oxd-php)). With registration it
-gets oxd\_id from oxd server. oxd\_id must be passed to all commands.
+gets oxd_id from oxd server. oxd\_id must be passed to all commands.
 
 **php-oxd-rp** is a thin wrapper around the communication protocol of
 oxD server. This can be used to access the OpenID connect & UMA
@@ -76,23 +73,21 @@ Relying Party (RP).
 PHP classes for communicating with oxd.
 
 Connecting to oxd server is doing via class Client\_Socket\_OXD\_RP
-[Client\_Socket\_OXD\_RP.php](#Client_Socket_OXD_RP "oxd:communication_protocol ?")
+[Client\_Socket\_OXD\_RP.php]
 
-### Client\_Socket\_OXD\_RP.php {#Client_Socket_OXD_RP .sectionedit100}
+## Client\_Socket\_OXD\_RP.php 
 
 Client\_Socket\_OXD\_RP class is base class for connecting to oxd
 server. It is given all parameters from oxd-rp-settings.json for
 connection and parameters saving to static values in class
-Oxd\_RP\_config
-[Oxd\_RP\_config.php](#Oxd_RP_config "oxd:communication_protocol ?")
+Oxd\_RP\_config.
 
-.
 
 Constructor accept folder base\_url = string parameter
 
 -   #### Parameter:
 
-    -   #### Name: \$socket;
+    -   #### Name: $socket;
 
         Type: static object;
 
@@ -119,7 +114,7 @@ Constructor accept folder base\_url = string parameter
         Description: Saving process in log file every day(example
         logs/oxd-php-server-{date}.log);
 
-### Oxd\_RP\_config.php {#Oxd_RP_config .sectionedit100}
+## Oxd\_RP\_config.php 
 
 ``` {.code}
 class Oxd_RP_config
@@ -140,7 +135,7 @@ class Oxd_RP_config
 
 Base class for protocols is abstract Client\_OXD\_RP.php, for which
 extends all protocols classes.
-[Client\_OXD\_RP](#Client_OXD_RP "oxd:communication_protocol ?")
+[Client\_OXD\_RP]
 
 -   [Register\_site.php](#Register_site)
 -   [Update\_site\_registration.php](#Update_site_registration)
@@ -149,16 +144,16 @@ extends all protocols classes.
 -   [Get\_user\_info.php](#Get_user_info)
 -   [Logout.php](#Logout)
 
-### Clinet\_OXD\_RP.php {#Client_OXD_RP .sectionedit100}
+## Clinet\_OXD\_RP.php 
 
 Client\_OXD\_RP class is abstract class,which extends from
 Client\_Socket\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
-    -   #### Name: \$command\_types;
+    -   #### Name: $command\_types;
 
         Type:array;
 
@@ -170,7 +165,7 @@ Constructor accept parent constructor parameter (\$base\_url = string)
         Description: all protocol names. need for checking protocol
         type;
 
-    -   #### Name: \$command;
+    -   #### Name: $command;
 
         Type:string;
 
@@ -178,7 +173,7 @@ Constructor accept parent constructor parameter (\$base\_url = string)
 
         Description: request command to oxd;
 
-    -   #### Name: \$response\_json;
+    -   #### Name: $response\_json;
 
         Type:string(json);
 
@@ -186,16 +181,16 @@ Constructor accept parent constructor parameter (\$base\_url = string)
 
         Description: response, which coming from oxd;
 
-    -   #### Name: \$response\_object;
+    -   #### Name: $response\_object;
 
         Type:array;
 
         Default value = null;
 
         Description: response object, which parsed from
-        \$response\_json;
+        $response\_json;
 
-    -   #### Name: \$response\_status;
+    -   #### Name: $response\_status;
 
         Type:string;
 
@@ -203,7 +198,7 @@ Constructor accept parent constructor parameter (\$base\_url = string)
 
         Description: response status, can be Ok or Error;
 
-    -   #### Name: \$data;
+    -   #### Name: $data;
 
         Type:array;
 
@@ -271,22 +266,22 @@ Constructor accept parent constructor parameter (\$base\_url = string)
         Description: Getting response from oxD server, returning array
         object;
 
-### Register\_site.php {#Register_site .sectionedit100}
+## Register\_site.php 
 
 Register\_site class extends from Clinet\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
     -   #### Description: Parameters necessary for to request Register\_site protocol;
 
-        \$request\_authorization\_redirect\_uri,\$request\_response\_types,\$request\_client\_logout\_uri,\$request\_grant\_types,\$request\_scope,
-        \$request\_logout\_redirect\_uri, \$request\_application\_type,
-        \$request\_redirect\_uris, \$request\_acr\_values,
-        \$request\_client\_jwks\_uri,
-        \$request\_client\_token\_endpoint\_auth\_method,
-        \$request\_client\_request\_uris, \$request\_contacts;
+        $request\_authorization\_redirect\_uri,$request\_response\_types,$request\_client\_logout\_uri,$request\_grant\_types,$request\_scope,
+        $request\_logout\_redirect\_uri, $request\_application\_type,
+        $request\_redirect\_uris, $request\_acr\_values,
+        $request\_client\_jwks\_uri,
+        $request\_client\_token\_endpoint\_auth\_method,
+        $request\_client\_request\_uris, $request\_contacts;
 
         Type:string;
 
@@ -294,7 +289,7 @@ Constructor accept parent constructor parameter (\$base\_url = string)
 
     -   #### Description: Response parameters from oxd;
 
-        \$response\_oxd\_id
+        $response\_oxd\_id
 
         Type:string;
 
@@ -333,22 +328,22 @@ print_r($register_site->getResponseObject());
                         
 ```
 
-### Update\_site\_registration.php {#Update_site_registration .sectionedit100}
+## Update\_site\_registration.php 
 
 Update\_site\_registration class extends from Clinet\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
     -   #### Description: Parameters necessary for to request Update\_site\_registration protocol;
 
-        \$request\_oxd\_id,\$request\_authorization\_redirect\_uri,\$request\_response\_types,\$request\_client\_logout\_uri,\$request\_grant\_types,\$request\_scope,
-        \$request\_logout\_redirect\_uri, \$request\_application\_type,
-        \$request\_redirect\_uris, \$request\_acr\_values,
-        \$request\_client\_jwks\_uri,
-        \$request\_client\_token\_endpoint\_auth\_method,
-        \$request\_client\_request\_uris, \$request\_contacts;
+        $request\_oxd\_id,$request\_authorization\_redirect\_uri,$request\_response\_types,$request\_client\_logout\_uri,$request\_grant\_types,$request\_scope,
+        $request\_logout\_redirect\_uri, $request\_application\_type,
+        $request\_redirect\_uris, $request\_acr\_values,
+        $request\_client\_jwks\_uri,
+        $request\_client\_token\_endpoint\_auth\_method,
+        $request\_client\_request\_uris, $request\_contacts;
 
         Type:string;
 
@@ -356,7 +351,7 @@ Constructor accept parent constructor parameter (\$base\_url = string)
 
     -   #### Description: Response parameters from oxd;
 
-        \$response\_oxd\_id
+        $response\_oxd\_id
 
         Type:string;
 
@@ -396,17 +391,17 @@ print_r($update_site_registration->getResponseObject());
                         
 ```
 
-### Get\_authorization\_url.php {#Get_authorization_url .sectionedit100}
+## Get\_authorization\_url.php 
 
 Get\_authorization\_url class extends from Clinet\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
     -   #### Description: Parameters necessary for to request Get\_authorization\_url protocol;
 
-        \$request\_oxd\_id, \$request\_acr\_values
+        $request\_oxd\_id, $request\_acr\_values
 
         Type:string;
 
@@ -414,7 +409,7 @@ Constructor accept parent constructor parameter (\$base\_url = string)
 
     -   #### Description: Response parameters from oxd;
 
-        \$response\_authorization\_url
+        $response\_authorization\_url
 
         Type:string;
 
@@ -439,27 +434,27 @@ echo $get_authorization_url->getResponseAuthorizationUrl();
                         
 ```
 
-### Get\_tokens\_by\_code.php {#Get_tokens_by_code .sectionedit100}
+## Get\_tokens\_by\_code.php
 
 Get\_tokens\_by\_code class extends from Clinet\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
     -   #### Description: Parameters necessary for to request Get\_tokens\_by\_code protocol;
 
-        \$request\_oxd\_id, \$request\_state, \$request\_scopes,
-        \$request\_code Type:string;
+        $request\_oxd\_id, $request\_state, $request\_scopes,
+        $request\_code Type:string;
 
         Default value = null;
 
     -   #### Description: Response parameters from oxd;
 
-        \$response\_access\_token, \$response\_expires\_in,
-        \$response\_id\_token = Type:string;
+        $response\_access\_token, $response\_expires\_in,
+        $response\_id\_token = Type:string;
 
-        \$response\_id\_token\_claims = Type:array;
+        $response\_id\_token\_claims = Type:array;
 
 -   #### Functions:
 
@@ -489,21 +484,21 @@ $_SESSION['session_state'] = $_REQUEST['session_state'];
 print_r($get_tokens_by_code->getResponseObject());
 ```
 
-### Get\_user\_info.php {#Get_user_info .sectionedit100}
+## Get\_user\_info.php
 
 Get\_user\_info class extends from Clinet\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
     -   #### Description: Parameters necessary for to request Get\_user\_info protocol;
 
-        Type:string: \$request\_oxd\_id, \$request\_access\_token
+        Type:string: $request\_oxd\_id, $request\_access\_token
 
     -   #### Description: Response parameters from oxd;
 
-        \$response\_claims
+        $response\_claims
 
         Type:array;
 
@@ -557,27 +552,27 @@ echo 'Updated At: '.$get_user_info->getResponseUpdatedAt();
                         
 ```
 
-### Logout.php {#Logout .sectionedit100}
+## Logout.php
 
 Logout class extends from Clinet\_OXD\_RP class.
 
-Constructor accept parent constructor parameter (\$base\_url = string)
+Constructor accept parent constructor parameter ($base\_url = string)
 
 -   #### Parameters:
 
     -   #### Description: Parameters necessary for to request Logout protocol;
 
-        Type:string: \$request\_oxd\_id, \$request\_id\_token,
-        \$request\_post\_logout\_redirect\_uri,
-        \$request\_session\_state, \$request\_state
+        Type:string: $request\_oxd\_id, $request\_id\_token,
+        $request\_post\_logout\_redirect\_uri,
+        $request\_session\_state, $request\_state
 
     -   #### Description: Parameters necessary for to request Logout protocol;
 
-        Type:boolean: \$request\_http\_based\_logout
+        Type:boolean: $request\_http\_based\_logout
 
     -   #### Description: Response parameters from oxd;
 
-        \$response\_html
+        $response\_html
 
         Type:string;
 
