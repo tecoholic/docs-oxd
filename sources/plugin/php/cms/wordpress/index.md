@@ -31,15 +31,15 @@ or
 
 # Step 3. Unzip and run oXD-server
  
-### Unzip your oXD-server. 
-### Open the command line and navigate to the extracted folder in the conf directory.
-### Open oxd-conf.json file.  
-### If your server is using 8099 port, please change "port" number to free port, which is not using.
-### Set parameter "op_host":"Your gluu-server-url (internal or external)"
-### Open the command line and navigate to the extracted folder in the bin directory.
-### For Linux environment, run sh oxd-start.sh&. 
-### For Windows environment, run oxd-start.bat.
-### After the server starts, go to Step 4.
+1. Unzip your oXD-server. 
+2. Open the command line and navigate to the extracted folder in the conf directory.
+3. Open oxd-conf.json file.  
+4. If your server is using 8099 port, please change "port" number to free port, which is not using.
+5. Set parameter "op_host":"Your gluu-server-url (internal or external)"
+6. Open the command line and navigate to the extracted folder in the bin directory.
+7. For Linux environment, run sh oxd-start.sh&. 
+8. For Windows environment, run oxd-start.bat.
+9. After the server starts, go to Step 4.
 
 # Step 4. Download wp-sso-plugin
  
@@ -63,8 +63,8 @@ Upload plugin and click install now button.
 
 # Step 7. Activate plugin
  
-### Go to https://{site-base-url}/wp-admin/plugins.php
-### Find Gluu SSO {version} plugin and click activate button.
+1. Go to https://{site-base-url}/wp-admin/plugins.php
+2. Find Gluu SSO {version} plugin and click activate button.
 
 # Step 8. Plugin configuration
  
@@ -72,10 +72,10 @@ Now in your admin menu panel you can see Gluu SSO {version menu} tab, click on i
 
 # Step 9. General
 
-![General](https://github.com/GluuFederation/gluu-wordpress-sso-login-plugin/blob/master/wp-sso-2.4.2/docu/1.png) 
+![General](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/1.png) 
 
-### Membership: must be checked.
-### New User Default Role: please choose user role. 
-### Admin Email: please add your or admin email address for registrating site in Gluu server.
-### Oxd port: choose that port which is using oxd-server (see in oxd-server/conf/oxd-conf.json file).
-
+1. Membership: must be checked.
+2. New User Default Role: please choose user role. 
+3. Admin Email: please add your or admin email address for registrating site in Gluu server.
+4. Oxd port: choose that port which is using oxd-server (see in oxd-server/conf/oxd-conf.json file).
+5. Click next to continue.
