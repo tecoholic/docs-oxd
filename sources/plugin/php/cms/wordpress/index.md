@@ -2,9 +2,9 @@ Wordpress SSO plugin
 =========================
 ![image](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-oxd-login-plugin/master/plugin.jpg)
 
-WP-GlUU-SSO plugin gives access for login to your wordpress site, with the help of GLUU server.
+WP-GLUU-SSO plugin gives access for login to your wordpress site, with the help of GLUU server.
 
-There are already 2 versions of WP-GlUU-SSO (2.4.2 and 2.4.3) plugins, each in its turn is working with oXD and GLUU servers.
+There are already 2 versions of WP-GLUU-SSO (2.4.2 and 2.4.3) plugins, each in its turn is working with oXD and GLUU servers.
 For example if you are using wp-gluu-sso-2.4.2 plugin, you need to connect with oXD-server-2.4.2.
 
 Now I want to explain in details how to use plugin step by step. 
@@ -113,7 +113,7 @@ Custom Script represent itself the type of login, at this moment gluu server sup
 ### Pay attention to that.
 
 1. Which custom script you enable in your wordpress site in order it must be switched on in gluu server too.
-2. Which custom script you will be enable in OpenID Connect Configuration page, after saving that will be showed in Wordpress Configuration page to.
+2. Which custom script you will be enable in OpenID Connect Configuration page, after saving that will be showed in Wordpress Configuration page too.
 3. When you create new custom script, both fields are required.
 
 ## Step 11. Wordpress Configuration
