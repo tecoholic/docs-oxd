@@ -104,7 +104,7 @@ Pay attention to that, which scopes you are using that are switched on in your g
 In Magento-gluu-sso 2.4.2.0  you can only enable, disable and delete scope.
 ![Scopes1](https://raw.githubusercontent.com/GluuFederation/gluu-magento-sso-login-extension/master/docu/m3.png) 
 
-In Magento-gluu-sso 2.4.3.0 you can not only enable, disable and delete scope, but also add new scope, but when you add new scope by {any name}, necessary to add that scop in your gluu server too. 
+In Magento-gluu-sso 2.4.3.0 you can not only enable, disable and delete scope, but also add new scope, but when you add new scope by {any name}, necessary to add that scope in your gluu server too. 
 ![Scopes2](https://raw.githubusercontent.com/GluuFederation/gluu-magento-sso-login-extension/master/docu/m4.png) 
 
 ### Custom scripts.
@@ -127,7 +127,7 @@ Custom Script represent itself the type of login, at this moment gluu server sup
 Pay attention to that, if custom scripts are not enabled, nothing will be showed.
 Customize shape, space between icons and size of the login icons.
 
-![WordpressConfiguration](https://raw.githubusercontent.com/GluuFederation/gluu-magento-sso-login-extension/master/docu/m6.png)  
+![MagentoConfiguration](https://raw.githubusercontent.com/GluuFederation/gluu-magento-sso-login-extension/master/docu/m6.png)  
 
 ## Step 10. Show icons in frontend
 

@@ -1,4 +1,4 @@
-Wordpress SSO plugin 
+Wordpress GLUU SSO plugin 
 =========================
 ![image](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-oxd-login-plugin/master/plugin.jpg)
 
@@ -68,7 +68,7 @@ Upload plugin and click on install now button.
 
 ## Step 8. Plugin configuration
  
-Now in your admin menu panel you can see Gluu SSO {version menu} tab, click on it.
+Now in your admin menu panel you can see Gluu SSO {version} menu tab, click on it.
 
 ## Step 9. General
 
@@ -100,7 +100,7 @@ Pay attention to that, which scopes you are using that are switched on in your g
 In wp-gluu-sso 2.4.2  you can only enable, disable and delete scope.
 ![Scopes1](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/3.png) 
 
-In wp-gluu-sso 2.4.3 you can not only enable, disable and delete scope, but also add new scope, but when you add new scope by {any name}, necessary to add that scop in your gluu server too. 
+In wp-gluu-sso 2.4.3 you can not only enable, disable and delete scope, but also add new scope, but when you add new scope by {any name}, necessary to add that scope in your gluu server too. 
 ![Scopes2](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-sso-login-plugin/master/wp-sso-2.4.2/docu/4.png) 
 
 ### Custom scripts.
