@@ -2,7 +2,7 @@
 
 # Goal
 
-The design goal for oxD is to make it easier for developers to writeOpenID Connect and (eventually) UMA applications.
+The design goal for oxD is to make it easier for developers to write OpenID Connect and (eventually) UMA applications.
 
 # Introduction
 ![image](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-oxd-login-plugin/master/plugin.jpg)
