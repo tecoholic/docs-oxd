@@ -1,5 +1,5 @@
-site_name: Gluu Docs
-site_description: Documenation for the Gluu Server
+site_name: oxD Docs
+site_description: Documenation for oxD
 site_favicon: '/img/gluu_favicon.ico'
 copyright: Copyright &copy; 2014, Gluu, Inc.
 docs_dir: sources 
