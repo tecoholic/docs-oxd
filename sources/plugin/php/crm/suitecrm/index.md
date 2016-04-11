@@ -65,10 +65,7 @@ For example if you are using gluu-server-2.4.2 it is necessary to use oxD-server
 3. Click on ```Install``` button. 
 ![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SuiteCRM-module/master/docu/d4.png) 
 
-4. Click on ```Install``` button. 
-![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SuiteCRM-module/master/docu/d4.png) 
-
-5. Open menu tab Gluu SSO 2.4.v 
+4. Open menu tab Gluu SSO 2.4.v 
 ![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SuiteCRM-module/master/docu/d5.png) 
 
 ## Step 6. General
@@ -87,7 +84,7 @@ For making sure go to your gluu server / OpenID Connect / Clients and search for
 
 If you want to reset configurations click on Reset configurations button.
 
-## Step 7. OpenID Connect Configuration
+## Step 8. OpenID Connect Configuration
 
 OpenID Connect Configuration page for SuiteCRM-gluu-sso 2.4.2 and SuiteCRM-gluu-sso 2.4.3 are different.
 
@@ -115,7 +112,7 @@ Custom Script represent itself the type of login, at this moment gluu server sup
 2. Which custom script you will be enable in OpenID Connect Configuration page, after saving that will be showed in SuiteCRM Configuration page too.
 3. When you create new custom script, both fields are required.
 
-## Step 8. SuiteCRM Configuration
+## Step 9. SuiteCRM Configuration
 
 ### Customize Login Icons
  
@@ -124,6 +121,6 @@ Customize shape, space between icons and size of the login icons.
 
 ![SuiteCRMConfiguration](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SuiteCRM-module/master/docu/d11.png)  
 
-## Step 9. Show icons in frontend
+## Step 10. Show icons in frontend
 
 ![frontend](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SuiteCRM-module/master/docu/d12.png) 

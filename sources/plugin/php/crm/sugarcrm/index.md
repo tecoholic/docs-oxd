@@ -27,7 +27,7 @@ If you want to use external gluu server, You can not do this step.
 
 or
 
-[Download oxD-server-2.4.3.DEMO](https://ox.gluu.org/maven/org/xdi/oxd-server/2.4.3-SNAPSHOT/oxd-server-2.4.3-SNAPSHOT-distribution.zip).
+[Download oxD-server-2.4.3.Final](https://ox.gluu.org/maven/org/xdi/oxd-server/2.4.3.Final/oxd-server-2.4.3.Final-distribution.zip).
 
 ## Step 3. Unzip and run oXD-server
  
@@ -45,41 +45,40 @@ or
  
 (version 2.4.2 or 2.4.3)
 
-[Download SugarCRM-gluu-sso-2.4.2 module](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/SugarCRM_gluu_sso_2.4.2/SugarCRM_gluu_sso_2.4.2.zip).
+[Download SugarCRM-gluu-sso-2.4.2 module](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/SugarCRM_gluu_sso_2.4.2/SuiteCRM_gluu_sso_2.4.2.zip).
 
 or
 
-[Download SugarCRM-gluu-sso-2.4.3 module](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/SugarCRM_gluu_sso_2.4.3/SugarCRM_gluu_sso_2.4.3.zip).
+[Download SugarCRM-gluu-sso-2.4.3 module](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/SugarCRM_gluu_sso_2.4.3/SuiteCRM_gluu_sso_2.4.3.zip).
 
 For example if you are using gluu-server-2.4.2 it is necessary to use oxD-server-2.4.2 and SugarCRM-gluu-sso-2.4.2-module
 
 ## Step 5. Install module
  
-1. Open menu tab Modules and click on ```Install new module``` button
-![Manager](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d1.png) 
+1. Open menu tab Admin and click on ```Module loader``` button
+![Manager](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/1.png) 
+![Manager](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/2.png) 
 
-2. Choose downloaded module and click on ```INSTALL``` button. 
-![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d2.png) 
-
-## Step 6. Activate module
- 
-1. Go to Modules page
-2. Find module Gluu SSO {version}, choose on enabled checkbox and save configuration.
+2. Choose downloaded module and click on ```Upload``` button. 
 ![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d3.png) 
-3. Go to Configuration page and open module configuration page.
+
+3. Click on ```Install``` button. 
 ![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d4.png) 
 
-## Step 7. General
+4. Open menu tab Gluu SSO 2.4.v 
+![upload](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d5.png) 
 
-![General](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d5.png)  
+## Step 6. General
+
+![General](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d6.png)  
 
 1. Admin Email: please add your or admin email address for registrating site in Gluu server.
-2. Oxd port in your server: choose that port which is using oxd-server (see in oxd-server/conf/oxd-conf.json file).
-3. Click next to continue.
+2. Port number: choose that port which is using oxd-server (see in oxd-server/conf/oxd-conf.json file).
+3. Click ```Next``` to continue.
 
 If You are successfully registered in gluu server, you will see bottom page.
 
-![oxD_id](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d6.png)
+![oxD_id](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d7.png)
 
 For making sure go to your gluu server / OpenID Connect / Clients and search for your oxD ID
 
@@ -95,14 +94,14 @@ Scopes are need for getting loged in users information from gluu server.
 Pay attention to that, which scopes you are using that are switched on in your gluu server.
 
 In SugarCRM-gluu-sso 2.4.2  you can only enable, disable and delete scope.
-![Scopes1](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d7.png) 
+![Scopes1](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d8.png) 
 
 In SugarCRM-gluu-sso 2.4.3 you can not only enable, disable and delete scope, but also add new scope, but when you add new scope by {any name}, necessary to add that scope in your gluu server too. 
-![Scopes2](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d8.png) 
+![Scopes2](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d9.png) 
 
 ### Custom scripts.
 
-![Customscripts](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d9.png)  
+![Customscripts](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d10.png)  
 
 You can look all custom scripts in your gluu server / Configuration / Manage Custom Scripts / and enable login type, which type you want.
 Custom Script represent itself the type of login, at this moment gluu server supports (U2F, Duo, Google +, Basic) types.
@@ -120,8 +119,8 @@ Custom Script represent itself the type of login, at this moment gluu server sup
 Pay attention to that, if custom scripts are not enabled, nothing will be showed.
 Customize shape, space between icons and size of the login icons.
 
-![SugarCRMConfiguration](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d10.png)  
+![SugarCRMConfiguration](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d11.png)  
 
 ## Step 10. Show icons in frontend
 
-![frontend](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d11.png) 
+![frontend](https://raw.githubusercontent.com/GluuFederation/gluu-sso-SugarCRM-module/master/docu/d12.png) 
