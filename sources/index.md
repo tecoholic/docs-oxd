@@ -5,7 +5,7 @@
 The design goal for oxD is to make it easier for developers to write OpenID Connect and (eventually) UMA applications.
 
 # Introduction
-![image](https://raw.githubusercontent.com/GluuFederation/gluu-wordpress-oxd-login-plugin/master/plugin.jpg)
+![image](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.png)
 
 Gluu oxD is the new addition to the Gluu family which is set of software that helps to easily work with:
 
@@ -26,10 +26,12 @@ Under oxD we understand:
     - [Installation](./oxdserver/install/index.md)
     - [Run](./oxdserver/run/index.md)
     - [Troubleshooting](./oxdserver/troubleshooting/index.md)
-- [Plugins](./plugin/index.md)
+- [Libraries (oxD Server Clients)]
     - [Python](./plugin/python/index.md)
+    - [PHP](./plugin/php/library/index.md)
+    - [Java](./plugin/java/index.md)
+- [Plugins](./plugin/index.md)
     - [PHP products](./plugin/php/index.md)
-        - [Php Library](./plugin/php/library/index.md)
         - [Wordpress plugin](./plugin/php/cms/wordpress/index.md)
         - [Magento extension](./plugin/php/cms/magento/index.md)
         - [Drupal module](./plugin/php/cms/drupal/index.md)
