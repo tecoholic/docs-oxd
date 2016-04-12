@@ -11,7 +11,7 @@ pages:
 - [index.md, Home]
 
 # oxD Server
-- [oxdserver/index.md, oxD Server, Introduction]
+- [oxdserver/index.md, oxD Server, Protocol]
 - [oxdserver/install/index.md, oxD Server, Installation]
 - [oxdserver/run/index.md, oxD Server, Run]
 - [oxdserver/troubleshooting/index.md, oxD Server, Troubleshooting]
