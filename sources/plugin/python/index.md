@@ -1,11 +1,9 @@
 # oxd-python
-Python Client Library for the [Gluu oxD Server RP](http://ox.gluu.org/doku.php?id=oxd:rp).
+Python Client Library for the [Gluu oxD](https://www.gluu.org/docs-oxd/).
 
-**oxdpython** is a thin wrapper around the communication protocol of oxD server. This can be used to access the OpenID connect & UMA Authorization end points of the Gluu Server via the oxD RP. This library provides the function calls required by a website to access user information from a OpenID Connect Provider (OP) by using the OxD as the Relying Party (RP).
+**oxdpython** is a thin wrapper around the [communication protocol](https://www.gluu.org/docs-oxd/oxdserver/) of oxD server. This can be used to access the OpenID connect & UMA Authorization end points of the Gluu Server via the oxD RP. This library provides the function calls required by a website to access user information from a OpenID Connect Provider (OP) by using the OxD as the Relying Party (RP).
 
-## Using the Library in your website
-
-[oxD RP](http://ox.gluu.org/doku.php?id=oxd:rp) has complete information about the Code Authorization flow and the various details about oxD RP configuration. This document provides only documentation about the oxd-python library.
+## Using the Python Library to build your website
 
 ### Prerequisites
 
@@ -13,8 +11,7 @@ Python Client Library for the [Gluu oxD Server RP](http://ox.gluu.org/doku.php?i
 
 ### Configuring
 
-Create a copy of the sample configuration file for your website in a server *writable* location. The website is registered with the OP and its ID is stored in this config file, also are the other peristant information about the website. So the config file needs to be *writable* for the server. The `sample.cfg` file contains complete documentation about itself.
-
+Create a copy of the [sample configuration](https://github.com/GluuFederation/oxd-python/blob/master/sample.cfg) file for your website in a server *writable* location. When the website is registered with the OP, its ID and other peristant information about the website are stored in this config file. So the config file needs to be *writable* for the server. The `sample.cfg` file contains complete documentation about itself.
 
 ### Importing
 
@@ -23,13 +20,13 @@ The `Client` class of the library provides all the required methods required for
 ```python
 from oxdpython import Client
 
-config = "/var/www/demosite/demosite.cfg"  # This should be writable by the server
+config = "/var/www/demosite/demosite.cfg"  # NOTE: This should be writable by the server
 client = Client(config)
 ```
 
 ### Website Registration
 
-The website can be registered with the OP using the `client.register_client()` call. This can be skipped as any `get_authorization_url()` automatically registers the site if it is not.
+The website can be registered with the OP using the `client.register_client()` call. This can be skipped as every call to `get_authorization_url()` registers the site if not already registered.
 
 ### Get Authorization URL
 
@@ -65,7 +62,7 @@ print user.username
 print user.inum
 print user.website
 ```
-The availability of varios claims are completely dependent on the OP. Listing the fields of user can give list of all the available claims.
+The availability of various claims are completely dependent on the OP. Listing the fields of user can give list of all the available claims.
 
 ```python
 print user._fields  # to print all the fields
