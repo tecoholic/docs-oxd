@@ -5,7 +5,7 @@
 The design goal for oxD is to make it easier for developers to write OpenID Connect and (eventually) UMA applications.
 
 # Introduction
-![image](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.png)
+![image](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.jpg)
 
 Gluu oxD is the new addition to the Gluu family which is set of software that helps to easily work with:
 
