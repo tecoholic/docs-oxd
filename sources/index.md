@@ -2,7 +2,7 @@
 
 # Goal
 
-The design goal for oxD is to make it easier for developers to write OpenID Connect and (eventually) UMA applications.
+The design goal for oxD is to make it easier for developers to secure their applications with OpenID Connect to achieve single sign-on and log-out (SSO/SLO).
 
 # Introduction
 ![image](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.jpg)
