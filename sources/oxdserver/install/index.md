@@ -26,20 +26,22 @@ It is not necessary to install oxD in Unix, it can be downloaded and run. The ox
 3. Run `oxd-server/bin/oxd-start.sh`
 
 # Configuration
-oxD configuration file is located in the `conf/configuration.json` file. 
+oxD configuration file is located in the `conf/oxd-conf.json` file.
 
 ![image](http://ox.gluu.org/lib/exe/fetch.php?media=oxd:oxd-dist.png)
+
+**Please define op_host which should point to valid CE installation.** Sample: "op_host":"https://ce-dev.gluu.org".
 
 The contents of the configuration file is as follows:
 
 ```
-configuration.json
+oxd-conf.json
 {
     "port":8099,
     "localhost_only":true,
     "time_out_in_seconds":0,
-    "register_client_app_type":"web",
-    "register_client_response_types":"code id_token token",
+    "jetty_port":8098,
+    "start_jetty":false,
     "use_client_authentication_for_pat":true,
     "trust_all_certs":true,
     "trust_store_path":"",
@@ -48,7 +50,8 @@ configuration.json
     "license_check_period_in_hours": 24,
     "public_key":"",
     "public_password":"",
-    "license_password":""
+    "license_password":"",
+    "op_host":""
 }
 ```
 
