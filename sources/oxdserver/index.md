@@ -30,6 +30,8 @@ During registration operation oxd dynamically register client for web site and k
 
 All parameters in register_site operation are optional except `authorization_redirect_uri`! All fallback values are taken from oxd-default-site-config.json
 
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
+
 Request:
 
 ```json
@@ -60,9 +62,46 @@ Response:
 }
 ```
 
+## Update site registration
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
+
+Request:
+
+```json
+{
+    "command":"update_site_registration",
+    "params": {
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
+        "authorization_redirect_uri": "https://client.example.org/cb",<- REQUIRED public address of the site
+        "post_logout_redirect_uri": "https://client.example.org/cb",  <- OPTIONAL public address of the site
+        "client_logout_uris":["https://client.example.org/logout"],<-OPTIONAL
+        "application_type":"web",                                  <- OPTIONAL, default web (can be "native")
+        "grant_types":[],                                          <- OPTIONAL
+        "redirect_uris": ["https://client.example.org/cb"],        <- OPTIONAL
+        "acr_values":[""],                                         <- OPTIONAL
+        "client_jwks_uri":"",                                      <- OPTIONAL
+        "client_token_endpoint_auth_method":"",                    <- OPTIONAL
+        "client_request_uris":[],                                  <- OPTIONAL
+        "contacts":["yuriy@gluu.org"]                              <- OPTIONAL
+    }
+}
+```
+
+Response:
+
+```json
+{
+    "status":"ok"
+}
+```
+
+
 ## Get authorization url
 
 Note: authorization_code grant type
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
 
 Request:
 
@@ -94,7 +133,9 @@ Response:
 
 ## Get Tokens (ID & Access) by Code
 
-Note: Python library must provide utility methods for web site to parse response from OP and send parsed code and state parameters to oxd:
+Note: Library (php/python/java/node) must provide utility methods for web site to parse response from OP and send parsed code and state parameters to oxd:
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
 
 ```
 HTTP/1.1 302 Found
@@ -115,7 +156,7 @@ Request:
 }
 ```
 
-Or otherwise if library does not provide parsing call it like this:
+Or otherwise if library does not provide parsing, call oxd server in following way:
 
 Request:
 
@@ -154,6 +195,8 @@ Response:
 
 ## Get User Info
 
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
+
 Request:
 
 ```json
@@ -186,6 +229,8 @@ Response:
 ```
 
 ## Log out
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
 
 Request:
 
