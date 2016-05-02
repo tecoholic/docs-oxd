@@ -228,7 +228,7 @@ Response:
 }
 ```
 
-## Log out
+## Log out URI
 
 For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
 
@@ -236,12 +236,13 @@ Request:
 
 ```json
 {
-    "command":"logout",
+    "command":"get_logout_uri",
     "params": {
         "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
-        "id_token":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso" <-- OPTIONAL (oxd server will use last used ID Token)
-        "post_logout_redirect_uri":"<post logout redirect uri here>",   <-- OPTIONAL
-        "http_based_logout":false     <- true if front-channed http based logout should be used
+        "id_token_hint":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso" <-- OPTIONAL (oxd server will use last used ID Token)
+        "post_logout_redirect_uri":"<post logout redirect uri here>"   <-- OPTIONAL
+        "state":"<site state>",                                        <-- OPTIONAL
+        "session_state":"<session state>"                              <-- OPTIONAL
     }
 }
 ```
@@ -252,7 +253,7 @@ Response:
 {
     "status":"ok",
     "data":{
-        "html":"<html of http based logout>"  <-- OPTIONAL, returned only if http_based_logout=true
+        "uri":"https://<server>/end_session?id_token_hint=<id token>&state=<state>&post_logout_redirect_uri=<...>"
     }
 }
 ```
