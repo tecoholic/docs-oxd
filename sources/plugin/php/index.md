@@ -8,3 +8,5 @@
 - [CRM](./crm/index.md)
     - [SugarCRM module](./crm/sugarcrm/index.md)
     - [SuiteCRM module](./crm/suitecrm/index.md)
+- [WebMail](./WebMail/index.md)
+    - [RoundCube plugin](./WebMail/roundcube/index.md)
