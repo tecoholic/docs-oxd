@@ -30,3 +30,5 @@ pages:
 - [plugin/php/crm/index.md, CRM]
 - [plugin/php/crm/sugarcrm/index.md, CRM, SugarCRM module]
 - [plugin/php/crm/suitecrm/index.md, CRM, SuiteCRM module]
+- [plugin/php/WebMail/index.md, WebMail]
+- [plugin/php/WebMail/roundcube/index.md, WebMail, RoundCube plugin]
