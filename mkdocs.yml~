@@ -6,7 +6,7 @@ docs_dir: sources
 repo_url: https://github.com/GluuFederation/docs-oxd
 theme: readthedocs 
 theme_dir: ./theme/mkdocs/ 
-pages: 
+pages:
  
 - [index.md, Home]
 
