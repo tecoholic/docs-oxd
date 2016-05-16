@@ -1,19 +1,16 @@
-Oxd-rp php library
-=========================
+# oxd-php
+PHP Client Library for the [Gluu oxD](https://www.gluu.org/docs-oxd/).
 
-Need to download and install gluu server in Your web server. For more
-information [click me](http://www.gluu.org/docs/).
+**oxdphp** is a thin wrapper around the [communication protocol](https://www.gluu.org/docs-oxd/oxdserver/) of oxD server. This can be used to access the OpenID connect & UMA Authorization end points of the Gluu Server via the oxD RP. This library provides the function calls required by a website to access user information from a OpenID Connect Provider (OP) by using the OxD as the Relying Party (RP).
 
-Need to download and install OXD server in Your web server. For more
-information [click me](http://ox.gluu.org/doku.php?id=oxd:rp).
+## Using the PHP Library to build your website
 
-For OXD server configuration [click me](http://ox.gluu.org/doku.php?id=oxd:home&s[]=mvn).
+### Prerequisites
 
-PHP Client Library for the [Gluu OXD-RP
-Server](https://github.com/GluuFederation/oxd-php/tree/master/oxd-rp).
+* Install `gluu-oxd-server`
 
-oxd-rp-php configuration 
-------------------------
+
+### oxd-rp-php configuration 
 
 Configuration file is located in 'oxd-rp/oxd-rp-settings.json' file in
 distribution package.
@@ -38,37 +35,6 @@ distribution package.
 
 -   oxd_host_port - port of oxd socket
 -   oxd_host_ip - flag to restrict communication to localhost only (if false then it's not restricted to localhost only)
-
-**Goal** :
-
--   It should be super simple to use library (
-    [python](https://github.com/GluuFederation/oxd-python)  /  
-    [php-oxd-rp](https://github.com/GluuFederation/oxd-php/tree/master/oxd-rp)) by
-    web site
--   implementation of new library (on any language) should be simplified
-
-[![](http://ox.gluu.org/lib/exe/fetch.php?media=oxd:oxd-rp.png)](http://ox.gluu.org/lib/exe/detail.php?id=oxd%3Arp&media=oxd:oxd-rp.png "oxd:oxd-rp.png")
-
-Web site 
---------
-
-Web site communicates with oxd via library (python/php-oxd-rp). Library
-must provide all convenient methods to web site code which will in
-background call oxd. Concrete library depends on programming language
-used by site. Here for simplicity we will PHP as sample.
-
-First of all web site must register itself on oxd with registration
-command (via library (
-[python](https://github.com/GluuFederation/oxd-python)  /  
-[php](https://github.com/GluuFederation/oxd-php)). With registration it
-gets oxd_id from oxd server. oxd\_id must be passed to all commands.
-
-**php-oxd-rp** is a thin wrapper around the communication protocol of
-oxD server. This can be used to access the OpenID connect & UMA
-Authorization end points of the Gluu Server via the oxD RP. This library
-provides the function calls required by a website to access user
-information from a OpenID Connect Provider (OP) by using the OxD as the
-Relying Party (RP).
 
 PHP classes for communicating with oxd.
 
@@ -137,7 +103,7 @@ Base class for protocols is abstract Client\_OXD\_RP.php, for which
 extends all protocols classes.
 [Client\_OXD\_RP]
 
--   [Register\_site.php](#Register_site)
+-   [Register\_site.php ](#Register_site)
 -   [Update\_site\_registration.php](#Update_site_registration)
 -   [Get\_authorization\_url.php](#Get_authorization_url)
 -   [Get\_tokens\_by\_code.php](#Get_tokens_by_code)
