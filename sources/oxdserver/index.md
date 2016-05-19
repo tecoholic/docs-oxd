@@ -262,21 +262,24 @@ Response:
 # UMA
 
 oxD Client Library used by Resource Server application MUST:
+
 - Register protection document (with uma_protect command)
 - Intercept HTTP call (before actual REST resource call) and check whether it's allowed to proceed with call or reject it according to uma_check_access command response:
-  - Allowed or if not_protected error - allow access
-  - Denied with ticket then return back HTTP response
-   ```
-      HTTP/1.1 401 Unauthorized
-      WWW-Authenticate: UMA realm="example",
-                        as_uri="https://as.example.com",
-                        ticket="016f84e8-f9b9-11e0-bd6f-0021cc6004de"
-   ```
-  - Denied without ticket
-   ```
-     HTTP/1.1 403 Forbidden
-     Warning: 199 - "UMA Authorization Server Unreachable"
-   ```
+  - Allow access - if response from uma_check_access is "allowed" or "not_protected" error is returned.
+  - uma_check_access returned "denied" with ticket then return back HTTP response
+
+```http
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: UMA realm="example",
+      as_uri="https://as.example.com",
+      ticket="016f84e8-f9b9-11e0-bd6f-0021cc6004de"
+```
+  - uma_check_access returned "denied" without ticket then return back HTTP response
+
+```http
+HTTP/1.1 403 Forbidden
+Warning: 199 - "UMA Authorization Server Unreachable"
+```
 
 [UMA 1.0.1 Specification](https://docs.kantarainitiative.org/uma/rec-uma-core.html#permission-failure-to-client)
 [Sample of Java Resteasy HTTP interceptor of uma-rs](https://github.com/GluuFederation/uma-rs/blob/master/uma-rs-resteasy/src/main/java/org/xdi/oxd/rs/protect/resteasy/RptPreProcessInterceptor.java)
