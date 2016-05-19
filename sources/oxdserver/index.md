@@ -265,24 +265,23 @@ oxD Client Library used by Resource Server application MUST:
 
 - Register protection document (with uma_protect command)
 - Intercept HTTP call (before actual REST resource call) and check whether it's allowed to proceed with call or reject it according to uma_check_access command response:
-  - Allow access - if response from uma_check_access is "allowed" or "not_protected" error is returned.
-  - uma_check_access returned "denied" with ticket then return back HTTP response
-
+    - Allow access - if response from uma_check_access is "allowed" or "not_protected" error is returned.
+    - uma_check_access returned "denied" with ticket then return back HTTP response
 ```http
 HTTP/1.1 401 Unauthorized
 WWW-Authenticate: UMA realm="example",
       as_uri="https://as.example.com",
       ticket="016f84e8-f9b9-11e0-bd6f-0021cc6004de"
 ```
-  - uma_check_access returned "denied" without ticket then return back HTTP response
+    - uma_check_access returned "denied" without ticket then return back HTTP response
 
 ```http
 HTTP/1.1 403 Forbidden
 Warning: 199 - "UMA Authorization Server Unreachable"
 ```
 
-[UMA 1.0.1 Specification](https://docs.kantarainitiative.org/uma/rec-uma-core.html#permission-failure-to-client)
-[Sample of Java Resteasy HTTP interceptor of uma-rs](https://github.com/GluuFederation/uma-rs/blob/master/uma-rs-resteasy/src/main/java/org/xdi/oxd/rs/protect/resteasy/RptPreProcessInterceptor.java)
+- [UMA 1.0.1 Specification](https://docs.kantarainitiative.org/uma/rec-uma-core.html#permission-failure-to-client)
+- [Sample of Java Resteasy HTTP interceptor of uma-rs](https://github.com/GluuFederation/uma-rs/blob/master/uma-rs-resteasy/src/main/java/org/xdi/oxd/rs/protect/resteasy/RptPreProcessInterceptor.java)
 
 ## UMA Protect resources
 
@@ -351,22 +350,26 @@ Request:
     "command":"uma_check_access",
     "params": {
         "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
-        "rpt":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso"     <-- REQUIRED RPT or blank value if absent (not send by RP)
-        "path":"<path of resource>"                                    <-- REQUIRED Path of resource (e.g. http://rs.com/phones), /phones should be passed
+        "rpt":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso",    <-- REQUIRED RPT or blank value if absent (not send by RP)
+        "path":"<path of resource>",                                   <-- REQUIRED Path of resource (e.g. http://rs.com/phones), /phones should be passed
         "http_method":"<http method of RP request>"                    <-- REQUIRED Http method of RP request (GET, POST, PUT, DELETE)
     }
 }
 ```
 
-For RP request:
+Sample of RP request:
 ```
-GET /users/alice/album/photo.jpg HTTP/1.1
+GET /users/alice/album/photo HTTP/1.1
 Authorization: Bearer vF9dft4qmT
 Host: photoz.example.com
 ```
 
-RPT is 'vF9dft4qmT'
-
+Params:
+```
+rpt: 'vF9dft4qmT'
+path: /users/alice/album/photo
+http_method: GET
+```
 
 Access Granted response:
 
