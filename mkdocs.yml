@@ -22,6 +22,7 @@ pages:
 - [plugin/java/index.md, Libraries, Java]
 - [plugin/php/library/index.md, Libraries, PHP]
 - [plugin/node/index.md, Libraries, Node]
+- [plugin/ruby/index.md, Libraries, Ruby]
 
 - [plugin/php/index.md, Plugins, Php]
 - [plugin/php/cms/index.md, CMS]
