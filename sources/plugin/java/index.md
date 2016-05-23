@@ -7,6 +7,8 @@ oxd-java is oxD Server client implemented in Java language which acts according 
 
 [Jenkins builds](https://ox.gluu.org/jenkins/job/oxd-java/)
 
+[API Documentation (Javadocs)](https://oxd.gluu.org/api-docs/oxd-java/2.4.4)
+
 Sample how to use oxd-java.
 
 
