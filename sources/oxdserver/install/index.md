@@ -50,14 +50,11 @@ oxd-conf.json
     "license_check_period_in_hours": 24,
     "public_key":"",
     "public_password":"",
-    "license_password":"",
-    "op_host":""
+    "license_password":""
 }
 ```
 
 * port - oxD socket port
 * localhost_only - flag to restrict communication
 * time_out_in_seconds - time out for oxd socket in seconds
-* register_client_app_type - dynamic client registration application type
-* register_client_response_types - dynamic client registration response types
 
