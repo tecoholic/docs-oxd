@@ -3,6 +3,8 @@ Python Client Library for the [Gluu oxD](https://www.gluu.org/docs-oxd/).
 
 **oxdpython** is a thin wrapper around the [communication protocol](https://www.gluu.org/docs-oxd/oxdserver/) of oxD server. This can be used to access the OpenID connect & UMA Authorization end points of the Gluu Server via the oxD RP. This library provides the function calls required by a website to access user information from a OpenID Connect Provider (OP) by using the OxD as the Relying Party (RP).
 
+[API Documentation](https://oxd.gluu.org/api-docs/oxd-python/2.4.4)
+
 ## Using the Python Library to build your website
 
 ### Prerequisites
