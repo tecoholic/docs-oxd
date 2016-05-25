@@ -261,29 +261,28 @@ Response:
 
 # UMA
 
+## UMA Resource Server
+
 oxD Client Library used by Resource Server application MUST:
 
-- Register protection document (with uma_protect command)
-- Intercept HTTP call (before actual REST resource call) and check whether it's allowed to proceed with call or reject it according to uma_check_access command response:
-    - Allow access - if response from uma_check_access is "allowed" or "not_protected" error is returned.
-    - uma_check_access returned "denied" with ticket then return back HTTP response
+- Register protection document (with uma_rs_protect command)
+- Intercept HTTP call (before actual REST resource call) and check whether it's allowed to proceed with call or reject it according to uma_rs_check_access command response:
+    - Allow access - if response from uma_rs_check_access is "allowed" or "not_protected" error is returned.
+    - uma_rs_check_access returned "denied" with ticket then return back HTTP response
 ```http
 HTTP/1.1 401 Unauthorized
 WWW-Authenticate: UMA realm="example",
       as_uri="https://as.example.com",
       ticket="016f84e8-f9b9-11e0-bd6f-0021cc6004de"
 ```
-    - uma_check_access returned "denied" without ticket then return back HTTP response
+    - uma_rs_check_access returned "denied" without ticket then return back HTTP response
 
 ```http
 HTTP/1.1 403 Forbidden
 Warning: 199 - "UMA Authorization Server Unreachable"
 ```
 
-- [UMA 1.0.1 Specification](https://docs.kantarainitiative.org/uma/rec-uma-core.html#permission-failure-to-client)
-- [Sample of Java Resteasy HTTP interceptor of uma-rs](https://github.com/GluuFederation/uma-rs/blob/master/uma-rs-resteasy/src/main/java/org/xdi/oxd/rs/protect/resteasy/RptPreProcessInterceptor.java)
-
-## UMA Protect resources
+### UMA RS Protect resources
 
 For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
 
@@ -291,7 +290,7 @@ Request:
 
 ```json
 {
-    "command":"uma_protect",
+    "command":"uma_rs_protect",
     "params": {
         "resources":[        <- as parameter here we have protection json that describes resources on RS
             {
@@ -339,7 +338,7 @@ Response:
 }
 ```
 
-## UMA Check Access
+### UMA RS Check Access
 
 For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
 
@@ -347,7 +346,7 @@ Request:
 
 ```json
 {
-    "command":"uma_check_access",
+    "command":"uma_rs_check_access",
     "params": {
         "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
         "rpt":"eyJ0 ... NiJ9.eyJ1c ... I6IjIifX0.DeWt4Qu ... ZXso",    <-- REQUIRED RPT or blank value if absent (not send by RP)
@@ -423,3 +422,128 @@ Resource is not protected
 }
 ```
 
+## UMA Requesting Party
+
+### UMA RP - Get RPT
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
+
+Request:
+
+```json
+{
+    "command":"uma_rp_get_rpt",
+    "params": {
+         "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",  <- REQUIRED
+         "force_new": false                                <- REQUIRED indicates whether return new RPT, in general should be false, so oxd server can cache/reuse same RPT
+    }
+}
+```
+
+Response:
+
+```json
+{
+     "status":"ok",
+     "data":{
+         "rpt":"vF9dft4qmT"
+     }
+}
+```
+
+### UMA RP - Authorize RPT
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
+
+Request:
+
+```json
+{
+    "command":"uma_rp_authorize_rpt",
+    "params": {
+         "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",  <- REQUIRED
+         "rpt": "vF9dft4qmT",                              <- REQUIRED
+         "ticket": "016f84e8-f9b9-11e0-bd6f-0021cc6004de"  <- REQUIRED
+    }
+}
+```
+
+Authorized Response (Success):
+
+```json
+{
+     "status":"ok",
+}
+```
+
+Not authorized error:
+```json
+{
+    "status":"error",
+    "data":{
+        "code":"not_authorized"
+        "description":"RPT is not authorized."
+    }
+}
+```
+
+
+Invalid ticket error:
+```json
+{
+    "status":"error",
+    "data":{
+        "code":"invalid_ticket"
+        "description":"Ticket is not valid (outdated or not present on Authorization Server)."
+    }
+}
+```
+
+Invalid rpt error:
+```json
+{
+    "status":"error",
+    "data":{
+        "code":"invalid_rpt"
+        "description":"RPT is not valid (outdated or not present on Authorization Server)."
+    }
+}
+```
+
+### UMA RP - Get GAT
+
+GAT stands for Gluu Access Token. It is invented by Gluu and is described here: https://ox.gluu.org/doku.php?id=uma:oauth2_access_management.
+
+For latest and most up to date parameters of command please check latest successful [jenkins build](https://ox.gluu.org/jenkins/job/oxd)
+
+Request:
+
+```json
+{
+    "command":"uma_rp_get_gat",
+    "params": {
+         "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",  <- REQUIRED
+         "scopes": [                                       <- REQUIRED RP should know required scopes in advance
+             "http://photoz.example.com/dev/actions/add",
+             "http://photoz.example.com/dev/actions/view",
+             "http://photoz.example.com/dev/actions/edit"
+         ]
+    }
+}
+```
+
+Response:
+
+```json
+{
+     "status":"ok",
+     "data":{
+         "gat":"fg6vF9dft4qmT"
+     }
+}
+```
+
+# References
+
+- [UMA 1.0.1 Specification](https://docs.kantarainitiative.org/uma/rec-uma-core.html#permission-failure-to-client)
+- [Sample RS of Java Resteasy HTTP interceptor of uma-rs](https://github.com/GluuFederation/uma-rs/blob/master/uma-rs-resteasy/src/main/java/org/xdi/oxd/rs/protect/resteasy/RptPreProcessInterceptor.java)
