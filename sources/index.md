@@ -27,13 +27,13 @@ you can write your own by implementing methods for this protocol.
     - [Installation](./oxdserver/install/index.md)
     - [Run](./oxdserver/run/index.md)
     - [Troubleshooting](./oxdserver/troubleshooting/index.md)
-- [oxd Libraries)]
+- oxD Libraries
     - [Python](./plugin/python/index.md)
     - [PHP](./plugin/php/library/index.md)
     - [Java](./plugin/java/index.md)
     - [Node](./plugin/node/index.md)
     - [Ruby](./plugin/ruby/index.md)
-- [oxd Plugins](./plugin/index.md)
+- [oxD Plugins](./plugin/index.md)
     - [Open Source Plugins](./plugin/php/index.md)
         - [Wordpress plugin](./plugin/php/cms/wordpress/index.md)
         - [Magento extension](./plugin/php/cms/magento/index.md)

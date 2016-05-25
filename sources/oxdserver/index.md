@@ -9,7 +9,7 @@ oxD Server is designed to work as standalone application (without Web Applicatio
 
 Web site communicates with oxD Server via library (python/php/java). Library provides all convenient methods to web site code which in background call oxD Server. Concrete library depends on programming language used by a web site. Here for simplicity we use Java as sample.
 
-![oxd_overview](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.png)
+![oxd-overview](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.jpg)
 
 First of all web site must register itself with oxD Server via registration command (using java/python/php library). With registration it gets oxd_id from oxD Server. oxd_id must be passed to all commands.
 
