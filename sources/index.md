@@ -38,6 +38,7 @@ you can write your own by implementing methods for this protocol.
         - [Wordpress plugin](./plugin/php/cms/wordpress/index.md)
         - [Magento extension](./plugin/php/cms/magento/index.md)
         - [Drupal module](./plugin/php/cms/drupal/index.md)
+        - [OpenCart module](./plugin/php/cms/opencart/index.md)
         - [SugarCRM module](./plugin/php/crm/sugarcrm/index.md)
         - [SuiteCRM module](./plugin/php/crm/suitecrm/index.md)
         - [RoundCube plugin](./plugin/php/WebMail/roundcube/index.md)
