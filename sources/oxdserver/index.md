@@ -292,7 +292,8 @@ Request:
 {
     "command":"uma_rs_protect",
     "params": {
-        "resources":[        <- as parameter here we have protection json that describes resources on RS
+        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",   <- REQUIRED
+        "resources":[        <-  REQUIRED as parameter here we have protection json that describes resources on RS
             {
                 "path":"/photo",
                 "conditions":[
