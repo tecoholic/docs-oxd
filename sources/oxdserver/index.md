@@ -417,8 +417,8 @@ Resource is not protected
 {
     "status":"error",
     "data":{
-        "code":"not_protected"
-        "description":"Resource is not protected."
+        "error":"invalid_request"
+        "error_description":"Resource is not protected. Please protect your resource first with uma_rs_protect command."
     }
 }
 ```
