@@ -157,20 +157,6 @@ Request:
 }
 ```
 
-Or otherwise if library does not provide parsing, call oxd server in following way:
-
-Request:
-
-```
-{
-    "command":"get_tokens_by_code",
-    "params": {
-        "oxd_id":"6F9619FF-8B86-D011-B42D-00CF4FC964FF",
-        "location":"https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=af0ifjsldkj&scopes=openid%20profile"
-    }
-}
-```
-
 Response:
 
 ```
