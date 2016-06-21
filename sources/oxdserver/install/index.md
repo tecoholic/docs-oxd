@@ -28,10 +28,6 @@ It is not necessary to install oxD in Unix, it can be downloaded and run. The ox
 # Configuration
 oxD configuration file is located in the `conf/oxd-conf.json` file.
 
-![image](http://ox.gluu.org/lib/exe/fetch.php?media=oxd:oxd-dist.png)
-
-**Please define op_host which should point to valid CE installation.** Sample: "op_host":"https://ce-dev.gluu.org".
-
 The contents of the configuration file is as follows:
 
 ```
