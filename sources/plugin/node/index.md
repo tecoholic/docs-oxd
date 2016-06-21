@@ -10,9 +10,9 @@ Note : **Gluu server** and **oxD-server** needs to be installed in the hosting s
 
 * To download and install Gluu server [click me](http://www.gluu.org/docs/).
 
-* To download and install oxD server [click me](http://ox.gluu.org/doku.php?id=oxd:rp).
+* To download and install oxD server [click me](https://www.gluu.org/docs-oxd).
 
-* For oxD server configuration [click me](http://ox.gluu.org/doku.php?id=oxd:home&s[]=mvn).
+* For oxD server configuration [click me](https://www.gluu.org/docs-oxd).
 
 
 oxD-node can be install using following command:

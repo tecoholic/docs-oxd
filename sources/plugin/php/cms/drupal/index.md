@@ -21,7 +21,7 @@ If you want to use external gluu server, You can not do this step.
 
 ## Step 2. Download oxD-server 
 
-(version 2.4.2 or 2.4.3)
+(version 2.4.2 or 2.4.3 or 2.4.4)
 
 [Download oxD-server-2.4.2.Final](https://ox.gluu.org/maven/org/xdi/oxd-server/2.4.2.Final/oxd-server-2.4.2.Final-distribution.zip).
 
