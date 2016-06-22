@@ -25,6 +25,42 @@ It is not necessary to install oxD in Unix, it can be downloaded and run. The ox
 2. Unzip the file in `oxd-server` folder. The folder name is for reference only; any other name will work as well.
 3. Run `oxd-server/bin/oxd-start.sh`
 
+## Alternative installation for RHEL/CentOS and Ubuntu/Debian
+CentOS 6:
+# wget https://repo.gluu.org/centos/Gluu-centos6.repo -O /etc/yum.repos.d/Gluu.repo
+# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU
+CentOS 7:
+# wget https://repo.gluu.org/centos/Gluu-centos7.repo -O /etc/yum.repos.d/Gluu.repo
+# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU
+RHEL 6:
+# wget https://repo.gluu.org/rhel/Gluu-rhel6.repo -O /etc/yum.repos.d/Gluu.repo
+# wget https://repo.gluu.org/rhel/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU
+RHEL 7:
+# wget https://repo.gluu.org/rhel/Gluu-rhel7.repo -O /etc/yum.repos.d/Gluu.repo
+# wget https://repo.gluu.org/rhel/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU
+# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU
+# yum clean all
+# yum install gluu-oxd-server
+# service gluu-oxd-server start
+Ubuntu 14.04(trusty):
+# echo "deb https://repo.gluu.org/ubuntu/ trusty main" > /etc/apt/sources.list.d/gluu-repo.list
+# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -
+# apt-get update
+# apt-get install gluu-oxd-server
+# service gluu-oxd-server start
+Ubuntu 16.04(xenial):
+# echo "deb https://repo.gluu.org/ubuntu/ xenial main" > /etc/apt/sources.list.d/gluu-repo.list
+# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -
+# apt-get update
+# apt-get install gluu-oxd-server
+# service gluu-oxd-server start
+Debian 8 (Jessie):
+# echo "deb https://repo.gluu.org/debian/ jessie main" > /etc/apt/sources.list.d/gluu-repo.list
+# curl https://repo.gluu.org/debian/gluu-apt.key | apt-key add -
+# apt-get update
+# apt-get install gluu-oxd-server
+# service gluu-oxd-server start
+
 # Configuration
 oxD configuration file is located in the `conf/oxd-conf.json` file.
 
