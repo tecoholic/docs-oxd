@@ -7,11 +7,13 @@ oxD server. This can be used to access the OpenID connect Authorization end poin
 the Gluu Server via the oxD RP. This library provides the function calls required by a website 
 to access user information from a OpenID Connect Provider (OP) by using the OxD as the Relying Party (RP).
 
+* [Code on GitHub](https://github.com/GluuFederation/oxd-csharp).
+* [Tests on GitHub](https://github.com/GluuFederation/oxd-csharp/tree/master/CSharp/client).
+
 ## Installation
 
 Note : Gluu server and oxD-server needs to be installed in the hosting server to use oxD-node library with your application.
-
-* To download and install Gluu server [click me](http://www.gluu.org/docs/).
+ 
 * To download and install oxD server [click me](https://www.gluu.org/docs-oxd/2.4.4/).
 * For oxD server configuration [click me](https://www.gluu.org/docs-oxd/2.4.4/).
 
