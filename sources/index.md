@@ -17,6 +17,7 @@ the application interface the same.
     - [oxd-php](./plugin/php/index.md) - Php implementation of client
     - [oxd-python](./plugin/python/index.md) - Python implementation of client
     - [oxd-node](./plugin/node/index.md) - Node.js implementation of client
+    - [oxd-csharp](./plugin/csharp/index.md) - C# implementation of client
 - [oxD plugins](./plugin/php/index.md) (more high-level implentation which is based on oxd library.
 - [Protocol](./oxdserver/index.md) oxd provides REST API's. If you can't find a client for your language, 
 you can write your own by implementing methods for this protocol. 
