@@ -12,13 +12,13 @@ to access user information from a OpenID Connect Provider (OP) by using the OxD 
 Note : Gluu server and oxD-server needs to be installed in the hosting server to use oxD-node library with your application.
 
 * To download and install Gluu server [click me](http://www.gluu.org/docs/).
-* To download and install oxD server [click me](http://ox.gluu.org/doku.php?id=oxd:rp).
-* For oxD server configuration [click me](http://ox.gluu.org/doku.php?id=oxd:home&s[]=mvn).
+* To download and install oxD server [click me](https://www.gluu.org/docs-oxd).
+* For oxD server configuration [click me](https://www.gluu.org/docs-oxd).
 
 ## How to use
 
 * oxd-csharp is oxD Server client implemented in C# language which acts according to [Protocol](https://www.gluu.org/docs-oxd/2.4.4/oxdserver/).
-* All test classes using [CommonClasses](https://github.com/GluuFederation/oxd-csharp/tree/master/TCP/CommonClasses) and [ResponseClasses](https://github.com/GluuFederation/oxd-csharp/tree/master/TCP/ResponseClasses).		
+
 
 ## Register Site
 
@@ -96,7 +96,6 @@ Note : Gluu server and oxD-server needs to be installed in the hosting server to
             }
         }	
 		
-update_site_registration class using [TCP.CommonClasses](https://github.com/GluuFederation/oxd-csharp/tree/master/TCP/CommonClasses) and [TCP.ResponseClasses](https://github.com/GluuFederation/oxd-csharp/tree/master/TCP/ResponseClasses).		
 
 * Parameters necessary for to request update_site_registration protocol
 	* op_host
