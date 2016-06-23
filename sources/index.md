@@ -11,6 +11,14 @@ the application interface the same.
 
 ![image](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/Overview.jpg)
 
+# License
+
+oxD is commercial open source software. The free version of oxD can be used without a commercial license, but is limited in throughput and transaction volumes. Learn more about the difference between each version on the oxD webpage. 
+
+The full software license can be [read here](https://github.com/GluuFederation/oxd/blob/master/LICENSE)
+
+# TOC
+
 - [oxD Server](./oxdserver/index.md)
 - [oxD Libraries] Clients for popular programing languages that call oxd API's and parse the returned JSON.
     - [oxd-java](./plugin/java/index.md) - Java implementation of client
