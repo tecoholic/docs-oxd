@@ -13,7 +13,7 @@ the application interface the same.
 
 # License
 
-oxD is commercial open source software. The free version of oxD can be used without a commercial license, but is limited in throughput and transaction volumes. Learn more about the difference between each version on the [oxD webpage](oxd.gluu.org/#oxd-pro). 
+oxD is commercial open source software. The free version of oxD can be used without a commercial license, but is limited in throughput and transaction volumes. Learn more about the difference between each version on the [oxD webpage](https://oxd.gluu.org/#oxd-pro). 
 
 The full software license can be [read here](https://github.com/GluuFederation/oxd/blob/master/LICENSE)
 
