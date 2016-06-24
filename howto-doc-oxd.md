@@ -53,6 +53,13 @@ this order:
 10. uma_rp_authorize_rpt
 11. gat_rp_get_rpt
 
+Use [code block formatting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code) so it's
+ easier to read.
+ 
+ Show the minimum code required to make it work. A link to test code is also good. This should not
+  be the place for library documentation, because we want to keep this short. 
+
+
 
 
 
