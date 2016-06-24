@@ -33,8 +33,8 @@ This is a good document any more information about this library.
 
 ## Section 3 - Config
 
-The library should help the developer persist configuration and registration information. 
-as a properties file system on the file system. Optional DB or other storage also ok.
+Developers should be able to persist configuration and registration properties 
+on the file system. Optional DB or other storage is also ok.
 
 ## Section 4 - Sample Code
 
