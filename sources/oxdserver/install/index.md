@@ -25,7 +25,7 @@ It is not necessary to install oxD in Unix, it can be downloaded and run. The ox
 2. Unzip the file in `oxd-server` folder. The folder name is for reference only; any other name will work as well.
 3. Run `oxd-server/bin/oxd-start.sh`
 
-### RHEL/CentOS and Ubuntu/Debian
+### Linux
 The Gluu Repository can be used to install oxD Server. The following headings are followed by installation commands that can be copied and used to isntall oxD Server in the desired OS.
 
 #### CentOS 6
