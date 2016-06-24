@@ -2,6 +2,8 @@
 
 All oxd libraries should have a uniform structure. We also want to re-use this document for the Github Readme.
 
+![Follow this outline for oxd docs...](https://raw.githubusercontent.com/GluuFederation/docs-oxd/master/sources/img/oxd-library-docs.png)
+
 ## Section 1 - Name / oxd info
 
 This section is very short. Simply provide your project name,
