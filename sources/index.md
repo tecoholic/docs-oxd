@@ -5,7 +5,7 @@
 oxd is a mediator: it provides API's that can be called by a web application that are easier
 than directly calling the API's of an OpenID Connect provider. oxd is not a proxy--in some 
 cases oxd returns URL's for the OP to which the web application must redirect the user. In addition 
-to simplying the interface, oxd externalizes the OpenID Connect client code. This may be useful
+to simplifying the interface, oxd externalizes the OpenID Connect client code. This may be useful
 to some organizations, as it enables update of the OpenID Connect client code, while keeping
 the application interface the same.
 
